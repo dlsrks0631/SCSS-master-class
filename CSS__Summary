@@ -92,3 +92,8 @@ display: grid;
   background-color: #f39c12;
   grid-area: footer;
 }
+
+-> grid-column: (start) / (end);
+-> grid-row: (start) / (end);
+-1, -2, -3, ··· -> 끝에서부터 line 세기
+(start) / span (cell 수) -> 시작점과 끝점을 적는걸 대신한다.
