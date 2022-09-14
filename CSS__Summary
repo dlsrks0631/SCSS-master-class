@@ -47,3 +47,48 @@ flex-wrap: wrap --> 자식의 크기를 유지시킴
 -> flex-flow
 (ex)
 flex-flow: row wrap -> flex-direction과 wrap을 같이 선언
+
+< Grid >
+(ex)
+display: grid;
+-> grid-template-columns: 250px 250px 등등 -> 원하는 column의 크기를 적어주면 됨(열의 가로길이)
+-> grid-template-rows: px px -> 원하는 row의 크기를 적어주면 됨(행의 세로길이)
+-> gap: 10px -> column과 row 사이에 10px의 공간을 주기
+-> row-gap: 10px -> 각 행들 사이에 10px의 공간을 주기
+-> column-gap: 10px -> 각 열들 사이에 10px의 공간을 주기
+
+-> grid-template-columns: 200px 200px 200px;
+=== grid-template-columns: repeat(3,200px);
+-> grid-template-areas
+
+(ex) 
+.grid{  
+  grid-template-areas:
+    "header header header header"
+    "content content content nav"
+    "content content content nav"
+    "footer footer footer footer";
+}
+
+-> grid-template-areas 조건
+1. grid 내부에 grid-area의 영역이 전부 이어져 있는가? 
+(ex: header 영역이 둘로 쪼개져 있고 그러면 안됨.)
+2. grid 내부에 grid-area의 영역이 직사각형인가? 
+(ex: header 영역이 ㄴ자 ㄱ자 등이어도 안됨.)
+
+.header {
+  background-color: #2ecc71;
+  grid-area: header --> grid 이름을 지정해줌
+}
+.content {
+  background-color: #3498db;
+  grid-area: content;
+}
+.nav {
+  background-color: #8e44ad;
+  grid-area: nav;
+}
+.footer {
+  background-color: #f39c12;
+  grid-area: footer;
+}
