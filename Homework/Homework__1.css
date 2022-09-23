@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid black;
+  margin-bottom: 20px;
+}
+
+#info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+#info > div {
+  display: flex;
+}
+#circles {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#circles div {
+  background-color: tomato;
+  width: 30px;
+  height: 30px;
+}
