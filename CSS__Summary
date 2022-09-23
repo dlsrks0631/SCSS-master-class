@@ -97,3 +97,48 @@ display: grid;
 -> grid-row: (start) / (end);
 -1, -2, -3, ··· -> 끝에서부터 line 세기
 (start) / span (cell 수) -> 시작점과 끝점을 적는걸 대신한다.
+
+-> repeat()
+Grid 내부의 셀의 길이를 지정할 때 사용
+예를 들어 12개의 길이가 같은 열을 만들고 싶다면
+
+(ex) --> 창의 길이가 줄면 같이 줄어들게 된다.
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+}
+
+-> minmax()
+- 최소 길이를 지정해 줄 수 있는 함수
+(ex)
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12,minmax(250px,1fr));
+}
+--- 전체 너비가 줄어들더라도 셀의 너비가 250px 이하로는 작아지지 않는다.
+
+-> auto-fill / auto-fit
+- repeat() 함수와 함께 사용
+- repeat() 함수의 파라미터로 열 또는 행의 개수를 미리 지정해 주지 않고, 
+  설정된 너비가 허용하는 한 최대한 셀을 채우게 된다.
+
+(ex)
+    <div class="grid">
+      <div class="boxes">1</div>
+      <div class="boxes">2</div>
+      <div class="boxes">3</div>
+      <div class="boxes">4</div>
+      <div class="boxes">5</div>
+    </div>
+
+    .grid {
+      display: grid;
+      grid-gap: 10px;
+      grid-auto-rows: 100px;
+      margin-bottom: 30px;
+    }
+  -> 창이 작을 시엔 auto-fit과 auto-fill 차이가 없지만
+  -> auto-fill은 설정된 너비에서 가능한 많은 셀들을 만들어 내려고 한다.
+      겉으로 보기에는 빈 공간이 있더라도 셀의 길이를 늘리지 않는다.
+  -> auto-fit은 빈 공간을 셀들이 나누어 가져서 딱 맞게 길이를 설정한다.
+      겉으로 보기에는 셀의 길이를 전체 너비에 맞게 늘린다.
