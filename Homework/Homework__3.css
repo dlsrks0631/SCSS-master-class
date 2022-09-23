@@ -1,0 +1,30 @@
+h1 {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-auto-rows: 300px;
+  margin-bottom: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body > div > div:nth-child(odd) {
+  background-color: #c5c4af;
+}
+body > div > div:nth-child(even) {
+  background-color: #993433;
+}
+
+.boxes img {
+  width: 300px;
+  height: 300px;
+  margin: auto 0;
+}
