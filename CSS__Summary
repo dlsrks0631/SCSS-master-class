@@ -108,7 +108,25 @@ grid-area: header || content || nav || footer --> 명시해줘야 함
 -> grid-column: span 원하는 셀수
 == grid-column: 시작점 / span 원하는 셀수로도 응용 가능
 
+-> grid-template: 
+  [원하는 이름-start]"header header header header" 1fr [원하는 이름-end] --> row 길이 작성 (높이)
+  "content content content nav" 2fr
+  "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr --> 각 column의 크기
+== 이름 지정은 안해도 됨
+== grid-template에선 repeat이 적용되지 않음
 
+-> place-items
+== justify-items: 수평 -> streth 가 기본상태 // start,center,end 사용
+== align-items: 수직 -> streth 가 기본상태  // start,center,end 사용
+== place-items: 수직 수평
+
+-> place-content
+== justify-content: grid에서 수평선상으로
+== align-content: grid에서 수직선상으로
+== place-content: 수직 수평
+
+-> align-self
+== child에게 적용 -> child 하나에게만 적용됨
 
 -> repeat()
 Grid 내부의 셀의 길이를 지정할 때 사용
