@@ -1,4 +1,5 @@
-< Flexbox >
+<<<<<<<<<< Flexbox >>>>>>>>>>
+
 -> 부모가 아닌 하나의 자식에게 적용
 -> align-self - 자식 하나만 선택하여 align-items역할을 수행할 수 있음
 -> order - html에서 순서를 바꿀 수 없을 경우 사용
@@ -48,19 +49,22 @@ flex-wrap: wrap --> 자식의 크기를 유지시킴
 (ex)
 flex-flow: row wrap -> flex-direction과 wrap을 같이 선언
 
-< Grid >
-(ex)
-display: grid;
--> grid-template-columns: 250px 250px 등등 -> 원하는 column의 크기를 적어주면 됨(열의 가로길이)
--> grid-template-rows: px px -> 원하는 row의 크기를 적어주면 됨(행의 세로길이)
--> gap: 10px -> column과 row 사이에 10px의 공간을 주기
--> row-gap: 10px -> 각 행들 사이에 10px의 공간을 주기
--> column-gap: 10px -> 각 열들 사이에 10px의 공간을 주기
+
+<<<<<<<<<< Grid >>>>>>>>>>
+
+-> display: grid;
+== grid-template-columns: 250px 250px 등등 -> 원하는 column의 크기를 적어주면 됨(열의 가로길이)
+== grid-template-rows: px px -> 원하는 row의 크기를 적어주면 됨(행의 세로길이)
+
+-> gap
+== column-gap || row-gap || gap 사용 가능
+== row-gap: 10px -> 각 행들 사이에 10px의 공간을 주기
+== column-gap: 10px -> 각 열들 사이에 10px의 공간을 주기
 
 -> grid-template-columns: 200px 200px 200px;
-=== grid-template-columns: repeat(3,200px);
--> grid-template-areas
+== grid-template-columns: repeat(3,200px);
 
+-> grid-template-areas
 (ex) 
 .grid{  
   grid-template-areas:
@@ -70,7 +74,9 @@ display: grid;
     "footer footer footer footer";
 }
 
--> grid-template-areas 조건
+grid-area: header || content || nav || footer --> 명시해줘야 함
+
+== grid-template-areas 조건
 1. grid 내부에 grid-area의 영역이 전부 이어져 있는가? 
 (ex: header 영역이 둘로 쪼개져 있고 그러면 안됨.)
 2. grid 내부에 grid-area의 영역이 직사각형인가? 
@@ -93,10 +99,16 @@ display: grid;
   grid-area: footer;
 }
 
--> grid-column: (start) / (end);
--> grid-row: (start) / (end);
+-> grid-column-start || grid-column-end
+== grid-column: (start) / (end);
+== grid-row: (start) / (end);
 -1, -2, -3, ··· -> 끝에서부터 line 세기
 (start) / span (cell 수) -> 시작점과 끝점을 적는걸 대신한다.
+
+-> grid-column: span 원하는 셀수
+== grid-column: 시작점 / span 원하는 셀수로도 응용 가능
+
+
 
 -> repeat()
 Grid 내부의 셀의 길이를 지정할 때 사용
