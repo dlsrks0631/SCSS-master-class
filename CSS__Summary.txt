@@ -196,3 +196,18 @@ grid-template-columns: repeat(auto-fill,minmax(250px,1fr))
 -> min-content && max-content
 == min-content: box를 만든다고 하면 content가 작아질 수 있는 만큼 작아짐
 == max-content: content가 필요한 만큼 크게 만드는 것
+
+-> text-orientation
+== mixed: 세로 쓰기 모드에서 가로 전용(영어) 문장의 타이포그래피 문자 단위는 옆으로,
+           즉 가로 텍스트의 표준 방향에서 시계 방향으로 90도로 출력된다.
+
+== sideways: 세로 쓰기 모드에서는 모든 텍스트가 옆으로 출력되지만 
+              시계 방향으로 90도 회전된다.
+
+== upright: 세로 쓰기 모드에서 가로 전용 문장의 타이포그래피 문자 단위는 수직으로, 
+              즉 표준 가로 방향으로 출력한다.
+
+-> writing-mode - 텍스트 표시 방향
+== horizontal-tb: 블록의 표시 방향은 위에서 아래 입니다. 문장은 가로로 표시됩니다.
+== vertical-rl: 블록의 표시 방향은 오른쪽에서 왼쪽입니다. 문장은 수직으로 표시됩니다.
+== vertical-lr: 블록의 표시 방향은 왼쪽에서 오른쪽입니다. 문장은 수직으로 표시됩니다.
