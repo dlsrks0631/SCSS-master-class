@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: #ffffff;
+  width: 100vw;
+  height: 200vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page {
+  width: 45%;
+  height: 70%;
+  background: #f5f5f5;
+  box-shadow: 30px 20px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 50px;
+}
+
+header {
+  background: #f5f5f5;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 3px solid black;
+  padding-bottom: 5px;
+}
+
+header span:nth-child(1) {
+  font-size: 100px;
+}
+
+header span:nth-child(2) {
+  font-size: 50px;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: bold;
+  padding-left: 0;
+  text-transform: uppercase;
+}
+
+.list nav:first-child {
+  display: flex;
+}
+.ul__1 {
+  padding: 0;
+}
+.list ul {
+  list-style: none;
+}
+
+main {
+  margin-top: 100px;
+}
+
+.circles {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.circle1 {
+  background: lightblue;
+  width: 13vw;
+  height: 13vw;
+  border-radius: 50%;
+}
+
+.circle2 {
+  background: lightgreen;
+  width: 13vw;
+  height: 13vw;
+  border-radius: 50%;
+}
+
+.circle3 {
+  background: lightpink;
+  width: 13vw;
+  height: 13vw;
+  border-radius: 50%;
+}

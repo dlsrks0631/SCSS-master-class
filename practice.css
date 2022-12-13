@@ -1,16 +1,23 @@
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: repeat(4, 100px);
-  grid-auto-rows: 100px;
-  gap: 10px;
-  height: 100vh;
+.father {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 200vh;
+  flex-wrap: nowrap;
 }
 
-.item:nth-child(odd) {
-  background-color: orange;
+.child {
+  width: 200px;
+  height: 200px;
+  background: peru;
+  color: white;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.item:nth-child(even) {
-  background-color: #3498db;
+.child:nth-child(2) {
+  background: black;
+  flex-grow: 0;
 }
